@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ContactFragment">
+
+    <fragment
+        android:id="@+id/ContactFragment"
+        android:name="com.arjenklaverstijn.android.customerlabelcreator.fragments.ContactDetailsFragment"
+        android:label="@string/customer_fragment_title"
+        tools:layout="@layout/fragment_contact_details">
+        <action
+            android:id="@+id/action_ContactFragment_to_productListFragment3"
+            app:destination="@id/productListFragment3"
+            app:enterAnim="@anim/animation_slide_in_right"
+            app:exitAnim="@anim/animation_slide_to_left"
+            app:popEnterAnim="@anim/animation_slide_in_left"
+            app:popExitAnim="@anim/animation_slide_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/productListFragment3"
+        android:name="com.arjenklaverstijn.android.customerlabelcreator.fragments.ProductListFragment"
+        android:label="@string/product_fragment_title"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/action_productListFragment3_to_PaymentFragment"
+            app:destination="@id/PaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sportFriendFragment"
+        android:name="com.arjenklaverstijn.android.customerlabelcreator.fragments.SportFriendFragment"
+        android:label="Sport Friend"
+        tools:layout="@layout/fragment_sportfriend" />
+    <fragment
+        android:id="@+id/PaymentFragment"
+        android:name="com.arjenklaverstijn.android.customerlabelcreator.fragments.PaymentFragment"
+        android:label="Payment info"
+        tools:layout="@layout/fragment_blank" />
+</navigation>
